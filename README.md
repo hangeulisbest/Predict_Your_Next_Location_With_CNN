@@ -24,7 +24,7 @@
 `longitude` | 경도
 
 ####  2. spec-file.txt 에 명시한 모듈을 모두 설치해 주세요.
-######  `$ conda create --name 'env' --file 'this file'`
+######  `$ conda create --name env --file spec-file.txt`
 
 
 #### 3. 설치한 가상환경 `env`로 이동합니다.
