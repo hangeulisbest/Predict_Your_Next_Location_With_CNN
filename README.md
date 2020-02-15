@@ -8,7 +8,7 @@
 
 속성 | 의미
 :---: | :---:
-author | gpx 데이터 주인 이름
+₩author₩ | gpx 데이터 주인 이름
 timestamp | 시간
 timezone | 시간 기준이 되는 위치
 latitude | 위도
