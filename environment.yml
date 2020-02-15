@@ -1,4 +1,4 @@
-name: keras
+name: predict
 channels:
   - defaults
 dependencies:
@@ -155,5 +155,5 @@ dependencies:
     - pydot-ng==2.0.0
     - scikit-learn==0.22.1
     - virtualenv==20.0.2
-prefix: /Users/wonjun/anaconda3/envs/keras
+prefix: /Users/wonjun/anaconda3/envs/predict
 
