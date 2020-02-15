@@ -31,15 +31,22 @@
 `longitude` | 경도
 
 ####  3. spec-file.txt 에 명시한 모듈을 모두 설치해 주세요.
-######  `$ conda create --name env --file spec-file.txt`
+~~~
+$ conda create --name env --file spec-file.txt
+~~~
 
+####  4. 설치한 가상환경 `env`로 이동합니다. 명령어는 다음과 같습니다.
+~~~
+conda activate env
+~~~
+######  만약 가상환경을 종료하려면
+~~~
+conda deactivate
+~~~
 
-####  4. 설치한 가상환경 `env`로 이동합니다.
-######  `conda activate env`
-######  *참고 만약 가상환경을 종료하려면
-######  `conda deactivate`
-
-
-####  5.
+####  5. `main.py` 가 있는 위치에서 다음 명령어를 입력합니다.
+~~~
+python3 main.py
+~~~
 
 
