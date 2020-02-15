@@ -39,12 +39,12 @@
 
 ####  3. `environment.yml`에 명시한 모듈을 모두 설치해 주세요.
 ~~~
-conda env create -f environment.yml
+conda env create -f ./environment.yml
 ~~~
 
-####  4. 설치한 가상환경으로 이동합니다. 명령어는 다음과 같습니다.
+####  4. 설치한 가상환경으로 이동합니다. 이름은 `predict` 입니다. 따라서 명령어는 다음과 같습니다.
 ~~~
-conda activate env
+conda activate predict
 ~~~
 ######  만약 가상환경을 종료하려면
 ~~~
