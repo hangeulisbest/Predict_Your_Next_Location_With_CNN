@@ -11,7 +11,9 @@
 #### 
 
 ##  모델 사용 방법
-####  1. 스포츠 트래커의 gpx 파일을 json 형태로 파싱한 json파일이 필요합니다. 아래의 사진과 같은 json 파일을 준비합니다.
+####  1. 네이버 클라우드 플랫폼의 Web Dynamic map을 사용하므로 자신의 클라이언트 아이디를 준비합니다.
+######  네이버 클라우드 플랫폼의 클라이언트 아이디를 발급 받기 위한 자세한 사항은 https://navermaps.github.io/maps.js.ncp/ 를 참고하세요.
+####  2. 스포츠 트래커의 gpx 파일을 json 형태로 파싱한 json파일이 필요합니다. 아래의 사진과 같은 json 파일을 준비합니다.
   
 <img width="309" alt="스크린샷 2020-02-15 오후 7 08 38" src="https://user-images.githubusercontent.com/48645552/74586062-1127f780-5027-11ea-8a51-ef01b65b5507.png">
 
@@ -23,13 +25,16 @@
 `latitude` | 위도
 `longitude` | 경도
 
-####  2. spec-file.txt 에 명시한 모듈을 모두 설치해 주세요.
+####  3. spec-file.txt 에 명시한 모듈을 모두 설치해 주세요.
 ######  `$ conda create --name env --file spec-file.txt`
 
 
-#### 3. 설치한 가상환경 `env`로 이동합니다.
+####  4. 설치한 가상환경 `env`로 이동합니다.
 ######  `conda activate env`
 ######  만약 가상환경을 종료하려면
 ######  `conda deactivate`
+
+
+####  5.
 
 
