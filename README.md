@@ -37,12 +37,12 @@
 `latitude` | 위도
 `longitude` | 경도
 
-####  3. spec_file.txt 에 명시한 모듈을 모두 설치해 주세요.
+####  3. `environment.yml`에 명시한 모듈을 모두 설치해 주세요.
 ~~~
-$ conda create --name env --file spec_file.txt
+conda env create -f environment.yml
 ~~~
 
-####  4. 설치한 가상환경 `env`로 이동합니다. 명령어는 다음과 같습니다.
+####  4. 설치한 가상환경으로 이동합니다. 명령어는 다음과 같습니다.
 ~~~
 conda activate env
 ~~~
