@@ -25,3 +25,11 @@
 
 ####  2. spec-file.txt 에 명시한 모듈을 모두 설치해 주세요.
 ######  `$ conda create --name 'env' --file 'this file'`
+
+
+#### 3. 설치한 가상환경 `env`로 이동합니다.
+######  `conda activate env`
+######  만약 가상환경을 종료하려면
+######  `conda deactivate`
+
+
