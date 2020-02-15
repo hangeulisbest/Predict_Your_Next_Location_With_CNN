@@ -14,7 +14,7 @@
 ####  1. 네이버 클라우드 플랫폼의 Web Dynamic map을 사용하므로 자신의 클라이언트 아이디를 준비합니다.
 ######  [네이버 클라우드 플랫폼의 클라이언트 아이디 발급](https://navermaps.github.io/maps.js.ncp/)
 ######  `templates/index.html` 의 다음 부분에 발급 받은 아이디를 입력합니다.
-~~~
+~~~xml
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=yourId"></script>
 ~~~
 
