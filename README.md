@@ -8,9 +8,8 @@
 
 ##  환경 설정
 
-####  spec-file.txt 에 환경 세팅에 대해 모든 모듈버전을 명시해 놓았습니다.
-######  This file may be used to create an environment using:
-######  $ conda create --name 'env' --file 'this file'
+####  environment.yml 에 환경 세팅에 대해 모든 모듈버전을 명시해 놓았습니다.
+####  mac 에서 테스트 결과 이상없음 
 ######  platform: osx-64
 
 ##  모델 훈련 방법
