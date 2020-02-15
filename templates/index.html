@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title>predict location from json</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--    이부분은 네이버 클라우드 플랫폼의 ai 서비스 어플리케이션을 등록한 후 아이디가 있어야 지도로 보여집니다. -->
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=yourID"></script>
+</head>
+
+<body>
+<h1>predict location from your json data</h1>
+{% if not latitude %}
+<h3><i>if you submit empty file, you will see error page </i></h3>
+{% endif %}
+<div class="agile-its">
+            <form id="upload" action="/predict" method="POST" enctype="multipart/form-data">
+                <div class="upload-btn-wrapper">
+<!--                    <button class="btn">json Data Upload</button>-->
+                    <input type="file" value="파일" name="jsData">
+                </div>
+                <input type="submit" value="보내기">
+                {% if latitude and longitude and dlat and dlon %}
+                <span class="result_lable">
+                    <p> Predict Result : Pink Box</p>
+                    <p> recent trajectory pattern: Green Line </p>
+                    </span>
+                {% endif %}
+            </form>
+</div>
+    <div id="map" style="width:100%;height:400px;"></div>
+    <script>
+
+        {% if latitude and dlat%}
+        let lat = {{ latitude }}
+        let _dlat = {{ dlat }}
+        {% else %}
+        let lat = 37.551375
+        let _dlat = lat+0.0005
+        {% endif %}
+
+        {% if longitude and dlon %}
+        let lon = {{longitude}}
+        let _dlon = {{ dlon }}
+        {% else %}
+        let lon = 126.924542
+        let _dlon = lon + 0.0005
+
+        {% endif %}
+
+        var mapOptions = {
+            center: new naver.maps.LatLng(lat, lon),
+            zoom: 18
+        };
+        var map = new naver.maps.Map('map', mapOptions);
+
+        var rectangle = new naver.maps.Rectangle({
+            strokeColor: '#ff00ff',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#ff00ff',
+            fillOpacity: 0.35,
+            bounds: new naver.maps.LatLngBounds(
+                new naver.maps.LatLng(lat, lon),
+                new naver.maps.LatLng(_dlat, _dlon)),
+            clickable: true,
+            map: map
+        });
+        var polylinePath = [];
+
+        {% if trajectory %}
+        var tmp = {{ trajectory }}
+        for(var i =0;i<tmp.length;i++)
+        {
+            polylinePath.push(new naver.maps.LatLng(tmp[i][0],tmp[i][1]))
+        }
+        console.log(polylinePath)
+        {% endif %}
+
+        var polyline = new naver.maps.Polyline({
+            path: polylinePath,
+            strokeColor: '#00CA00',
+            strokeOpacity: 0.8,
+            strokeWeight: 6,
+            zIndex: 2,
+            clickable: true,
+            map: map
+        });
+
+    </script>
+</body>
+
+</html>
