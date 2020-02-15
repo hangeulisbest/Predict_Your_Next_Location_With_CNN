@@ -13,7 +13,7 @@
 ######  platform: osx-64
 
 ##  모델 훈련 방법
-#### training 과 test에 관한 자세한 설명은 HowToTraining.md 파일을 참고해주세요.
+#### training 과 test에 관한 자세한 설명은 HowToTraining.md 파일을 참고해주세요. (수정중)
 #### 
 
 ##  모델 사용 방법
