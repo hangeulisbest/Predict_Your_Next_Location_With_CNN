@@ -1,6 +1,13 @@
 # Predict_Your_Next_Location_With_CNN
 
+##  요약
+
+######  홍대 근처에 나타난 위치데이터를 기반으로 사용자의 다음 위치를 예측합니다.
+######  따라서 홍대를 벗어난 위치에 대해서는 결과값은 무의미합니다.
+######  0.011(위도,경도 수치) 정도 정사각형의 맵 내에서만 위치 예측이 이루어집니다.
+
 ##  환경 설정
+
 ####  spec-file.txt 에 환경 세팅에 대해 모든 모듈버전을 명시해 놓았습니다.
 ######  This file may be used to create an environment using:
 ######  $ conda create --name 'env' --file 'this file'
@@ -48,5 +55,4 @@ conda deactivate
 ~~~
 python3 main.py
 ~~~
-
 
