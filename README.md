@@ -63,4 +63,4 @@ python3 main.py
 
 ####  7. 결과화면 예시
 
-
+<img width="1680" alt="스크린샷 2020-02-15 오후 11 02 46" src="https://user-images.githubusercontent.com/48645552/74589312-7d1a5800-5047-11ea-8526-0f779af188c9.png">
