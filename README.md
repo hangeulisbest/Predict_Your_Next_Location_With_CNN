@@ -7,7 +7,8 @@
 ######  platform: osx-64
 
 ##  모델 훈련 방법
-#### training 과 test에 관한 자세한 설명은 training.md 파일을 참고해주세요.
+#### training 과 test에 관한 자세한 설명은 HowToTraining.md 파일을 참고해주세요.
+#### 
 
 ##  모델 사용 방법
 ####  1. 스포츠 트래커의 gpx 파일을 json 형태로 파싱한 json파일이 필요합니다.
@@ -22,4 +23,5 @@
 `latitude` | 위도
 `longitude` | 경도
 
-####  2. 
+####  2. spec-file.txt 에 명시한 모듈을 모두 설치해 주세요.
+######  `$ conda create --name 'env' --file 'this file'`
