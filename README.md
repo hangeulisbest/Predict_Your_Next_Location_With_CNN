@@ -56,3 +56,5 @@ conda deactivate
 python3 main.py
 ~~~
 
+####  6. 아래의 사진과 같은 메인 화면이 뜨면 `파일 선택` 버튼을 눌러서 1번
+
