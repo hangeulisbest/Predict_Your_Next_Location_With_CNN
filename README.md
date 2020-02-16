@@ -8,23 +8,23 @@
 
 ##  환경 설정
 
-######  environment.yml 에 환경 세팅에 대해 모든 모듈버전을 명시해 놓았습니다.
+######  `environment.yml` 에 환경 세팅에 대해 모든 모듈버전을 명시해 놓았습니다.
 ######  mac 에서 테스트 결과 이상없음 
 ######  platform: osx-64
 
 ##  모델 훈련 방법
-#### training 과 test에 관한 자세한 설명은 HowToTraining.md 파일을 참고해주세요. (수정중)
+#### training 과 test에 관한 자세한 설명은 `training/HowToTraining.md` 파일을 참고해주세요. (수정중)
 #### 
 
 ##  모델 사용 방법
-####  1. 네이버 클라우드 플랫폼의 Web Dynamic map을 사용하므로 자신의 클라이언트 아이디를 준비합니다.
+####  1. 네이버 클라우드 플랫폼의 `Web Dynamic map`을 사용하므로 자신의 클라이언트 아이디를 준비합니다.
 ######  [네이버 클라우드 플랫폼의 클라이언트 아이디 발급](https://navermaps.github.io/maps.js.ncp/)
 ######  `templates/index.html` 의 다음 부분에 발급 받은 아이디를 입력합니다.
 ~~~xml
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=yourId"></script>
 ~~~
 
-####  2. 스포츠 트래커의 gpx 파일을 json 형태로 파싱한 json파일이 필요합니다. 아래의 사진과 같은 json 파일을 준비합니다. (gpx to json 자동화 준비중)
+####  2. 스포츠 트래커의 `gpx` 파일을 `json` 형태로 파싱한 `json`파일이 필요합니다. 아래의 사진과 같은 `json` 파일을 준비합니다. (gpx to json 자동화 준비중)
   
 <img width="309" alt="스크린샷 2020-02-15 오후 7 08 38" src="https://user-images.githubusercontent.com/48645552/74586062-1127f780-5027-11ea-8a51-ef01b65b5507.png">
 
@@ -66,6 +66,6 @@ python3 main.py
 <img width="1680" alt="스크린샷 2020-02-16 오후 3 26 16" src="https://user-images.githubusercontent.com/48645552/74600161-d5e20300-50d0-11ea-8716-6f8b9752db79.png">
 
 
-####  8. 예측에 이용된 json 파일은 경로 `temfile/` 에 저장됩니다.
+####  8. 예측에 이용된 `json` 파일은 경로 `temfile/` 에 저장됩니다.
 
 
