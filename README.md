@@ -64,6 +64,6 @@ python3 main.py
 
 <img width="1680" alt="스크린샷 2020-02-15 오후 11 02 46" src="https://user-images.githubusercontent.com/48645552/74589312-7d1a5800-5047-11ea-8526-0f779af188c9.png">
 
-####  8. 파일은 `/temfile/yourfile.json` 에 저장됩니다.
+####  8. 예측에 이용된 json 파일은 경로 `temfile/` 에 저장됩니다.
 
 
