@@ -1,6 +1,5 @@
 import flask
 import numpy as np
-from scipy import misc
 from tensorflow.keras.models import load_model
 from tensorflow.keras import backend as K
 import json
@@ -30,20 +29,25 @@ def index():
 @app.route('/predict', methods=['POST'])
 def make_prediction():
     if request.method == 'POST':
+        # parameter
+
         basePoint = [126.916810,37.548029]
         squareSize=0.011
         img_rows, img_cols = 24, 24
-        input_shape=(24,24,1)
+
+        #length of recent trajectory pattern
         pNum=10
+
         # 업로드 파일 처리 분기
-        if 'jsData' not in request.files:
-            return render_template('index.html', label="No1 Files")
+        if not request.files['jsData']:
+            return render_template('index.html', label="No Files")
         file = request.files['jsData']
+
         # if user does not select file, browser also
         # submit an empty part without filename
         if file.filename == '':
             flash('No selected file')
-            return render_template('index.html', label="No2 Files")
+            return render_template('index.html', label="No Files")
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
@@ -91,19 +95,22 @@ def make_prediction():
         x_test=list()
         x_test.append(tmpmap)
         x_test = np.array(x_test)
+
         #혹시 케라스 이미지 포멧이 채널이 first인경우는 바꿔준다
         if K.image_data_format() == 'channels_first':
             x_test = x_test.reshape(x_test.shape[0], 1, img_rows, img_cols)
-            input_shape = (1, img_rows, img_cols)
         else:
             x_test = x_test.reshape(x_test.shape[0], img_rows, img_cols, 1)
-            input_shape = (img_rows, img_cols, 1)
         x_test = x_test.astype('float32')
         x_test /= pNum
 
+        # 모델을 불러와서 예측한
         model = load_model('keraslocationpredict.h5')
         y = model.predict_classes(x_test)
+        # session을 비워준다
         K.clear_session()
+
+        # y값의 결과를 위도와 경도의 좌표로 바꿔준다
         longitude = y%img_rows
         latitude = y/img_cols
 
@@ -113,9 +120,10 @@ def make_prediction():
         longitude = longitude[0]
         latitude = latitude[0]
 
+        # 위도와 경도 결과값의 대각선 좌표를 구한다
         dlon = longitude + dl
         dlat = latitude + dl
-        # 결과 리턴
+
         return render_template('index.html', latitude=latitude,longitude=longitude,dlon=dlon,dlat=dlat,trajectory=trajectory)
 
 
