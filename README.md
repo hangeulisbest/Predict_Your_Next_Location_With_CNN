@@ -58,11 +58,13 @@ python3 main.py
 ####  6. 아래의 사진과 같은 메인 화면이 뜨면 `파일 선택` 버튼을 눌러서 1번에서 준비한 파일을 업로드합니다.
 ######  default 위치는 `홍익대학교` 입니다.
 
-<img width="1680" alt="스크린샷 2020-02-15 오후 10 09 06" src="https://user-images.githubusercontent.com/48645552/74588445-d67e8900-503f-11ea-9e60-73f8c98942a3.png">
+<img width="1680" alt="스크린샷 2020-02-16 오후 3 25 58" src="https://user-images.githubusercontent.com/48645552/74600160-d4b0d600-50d0-11ea-9577-e8145fab6f28.png">
+
 
 ####  7. 결과화면 예시
 
-<img width="1680" alt="스크린샷 2020-02-15 오후 11 02 46" src="https://user-images.githubusercontent.com/48645552/74589312-7d1a5800-5047-11ea-8526-0f779af188c9.png">
+<img width="1680" alt="스크린샷 2020-02-16 오후 3 26 16" src="https://user-images.githubusercontent.com/48645552/74600161-d5e20300-50d0-11ea-8716-6f8b9752db79.png">
+
 
 ####  8. 예측에 이용된 json 파일은 경로 `temfile/` 에 저장됩니다.
 
