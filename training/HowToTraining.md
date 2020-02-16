@@ -34,3 +34,13 @@ y_train=[6,11]
 
 ######  Architecture : `Cov(5*5) - MaxPool(2*2)  - Cov(5*5)  - MaxPool(2*2)  - FFN(576)`
 ######  자세한 사항은 코드를 참조하세요.
+
+
+### 2. 훈련 사용 방법
+
+파일명 | 설명
+:---: | :---:
+`training/data/trainData.json`  | 모델을 학습하기 위해 `gpx`파일을 `json`으로 파싱한 것입니다.
+`training/data/testData.json` | 모델을 테스트 하기 위해 사용한 `json` 파일입니다.
+`training/training.ipynb`  | 모델을 학습 시킵니다. 모델은 `keraslocationpredict.h5`로 저장됩니다.
+`training/test.ipynb` | 모델을 테스트 할 수 있습니다.
