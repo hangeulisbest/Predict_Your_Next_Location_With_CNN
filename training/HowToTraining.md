@@ -44,3 +44,20 @@ y_train=[6,11]
 `training/data/testData.json` | 모델을 테스트 하기 위해 사용한 `json` 파일입니다.
 `training/training.ipynb`  | 모델을 학습 시킵니다. 모델은 `keraslocationpredict.h5`로 저장됩니다.
 `training/test.ipynb` | 모델을 테스트 할 수 있습니다.
+
+
+######  각 `.ipynb`파일을 보면 파라미터만 간단하게 수정하여 훈련 및 테스트를 진행할 수 있습니다. 아래는 파라미터에 관한 설명입니다.
+
+파라미터 이름 | 설명
+:---: | :---:
+`batch_size`  | 배치사이즈를 조절하는 변수입니다. (자연수)
+`numclasses`  | `img_rows` * `img_cols` 값으로 설명하면 됩니다. (자연수)
+`basePoint` | 정사각형의 왼쪽 하단 좌표입니다. `[경도,위도]` 순서입니다. (실수,실수)
+`squareSize`  | 정사각형의 한변의 길이를 설정하는 부분입니다. 길이 단위는 위도 경도와 같습니다. (실수)
+`img_rows`  | 배열의 행의 크기를 결정합니다. `img_cols`값과 같아야 합니다. (자연수)
+`img_cols`  | 배열의 열의 크기를 결정합니다. `img_rows`값과 같아야 합니다. (자연수)
+`input_shape` | `(img_rows,img_cols,1)`로 설정합니다. 채널은 1입니다. (정수,정수,1)
+`r_train` | train set을 `r_train` : `r_test` 학습데이터로 나누는데 설정하는 비율 관련 수입니다. (실수)
+`r_test`  | train set을 `r_train` : `r_test` 테스트데이터를 나누는데 설정하는 비율 관련 수입니다. `r_train`보다 작아야 합니다. (실수)
+`pNum`  | pattern number의 줄임말이며 학습데이터에 몇개의 위치가 들어가는지 설정하는 변수입니다. (자연수)
+
