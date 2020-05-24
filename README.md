@@ -1,5 +1,5 @@
 # Predict_Your_Next_Location_With_CNN
-
+## **꼭 training 폴더에 howtotraining.md 파일을 읽어주세요.
 ##  요약
 
 ######  홍대 근처에 나타난 위치데이터를 기반으로 사용자의 다음 위치를 예측합니다.
